@@ -1,6 +1,6 @@
-const employeeName: string = "Ahmed";
-const employeeId: number = 1001;
-const employeeEmail: string = "ahmed@example.com";
+const employeeName: string = "Sample Employee";
+const employeeId: number = 1;
+const employeeEmail: string = "employee@example.com";
 const employeeActive: boolean = true;
 const basicSalary: number = "30000";
 const houseRent: number = 10000;
