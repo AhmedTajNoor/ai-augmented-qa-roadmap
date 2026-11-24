@@ -222,6 +222,29 @@ assert.throws(
   }),
   /cannot be negative/
 );
+// Verify gross salary
+assert.equal(calculateGrossSalary(validPayroll), 47000);
+
+// Verify total deductions
+assert.equal(calculateTotalDeductions(validPayroll), 5000);
+
+// Verify standalone gross salary rejects invalid input
+assert.throws(
+  () => calculateGrossSalary({
+    ...validPayroll,
+    basicSalary: -1000
+  }),
+  /cannot be negative/
+);
+
+// Verify standalone deductions reject invalid input
+assert.throws(
+  () => calculateTotalDeductions({
+    ...validPayroll,
+    loanDeduction: -1000
+  }),
+  /cannot be negative/
+);
 
 console.log("All assertions passed!");
 console.log("Passed:", passed);
